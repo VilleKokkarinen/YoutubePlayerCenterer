@@ -3,7 +3,11 @@ $(document).ready(function() {
 		try{
 			var element = document.getElementById("input");
 			
-			if(element != null)
+
+			if(v.amount == undefined || v.amount == null)
+			v.amount = 0;
+
+			if(element != null && element.value != null)
 				element.value = v.amount
 			else{
 				console.log("no input loaded");
@@ -18,7 +22,7 @@ $(document).ready(function() {
 					
 					var element = document.getElementById("input");
 			
-					if(element != null)
+					if(element != null && element.value != null)
 						element.value = v.amount
 					else{
 						console.log("no input loaded");
