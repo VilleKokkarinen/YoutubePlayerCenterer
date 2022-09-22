@@ -1,6 +1,6 @@
 {
     "name": "Youtube player centerer",
-    "version": "0.0.2",
+    "version": "0.0.3",
     "description": "Centers the youtube player, so it's not offset to the left",
     "manifest_version": 3,
     "author": "Ville kokkarinen",
