@@ -49,4 +49,9 @@ $(document).ready(function() {
 		chrome.storage.sync.set({ "amount": amount }, function(){
 		});
 	})
+	
+	browser.tabs
+  .executeScript({ file: "/PlayerCenterer.js" })
+  .then()
+  .catch();
 });
