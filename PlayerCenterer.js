@@ -51,9 +51,11 @@ var interval = null;
 	
 		if(cinemamode){
 			players[0]['style']['paddingLeft'] = currentamount+"vw";
+			players[0]['style']['display'] = "block";
 			CinemaOrFullScreen.value = false;
 		}else{
 			players[0]['style']['paddingLeft'] = 0+"vw";
+			players[0]['style']['display'] = "";
 			CinemaOrFullScreen.value = true;
 		}
 
@@ -74,8 +76,10 @@ var interval = null;
 		}	
 	
 		if(fsmode){
+			players[0]['style']['display'] = "block";
 			players[0]['style']['paddingLeft'] = currentamount+"vw";
 		}else{
+			players[0]['style']['display'] = "";
 			players[0]['style']['paddingLeft'] = 0+"vw";
 			CinemaOrFullScreen.value = true;
 		}
@@ -117,8 +121,11 @@ chrome.storage.onChanged.addListener(function (changes, namespace) {
 		if(amount != null){
 			currentamount = amount;
 
-			if(CinemaOrFullScreen.value == false)
-			players[0]['style']['paddingLeft'] = amount+"vw";
+			if(CinemaOrFullScreen.value == false){
+				players[0]['style']['display'] = "block";
+				players[0]['style']['paddingLeft'] = amount+"vw";
+			}
+			
 		}
 	}
 
