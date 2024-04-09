@@ -45,7 +45,7 @@ var interval = null;
 		
 		var players = document.getElementsByTagName("ytd-watch-flexy")
 	
-		if(ModeButton.getAttribute("data-title-no-tooltip") != "Cinema mode"){
+		if(ModeButton.getAttribute("data-title-no-tooltip") != "Theater mode"){
 			cinemamode = true;
 		}	
 	
